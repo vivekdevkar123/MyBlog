@@ -12,7 +12,7 @@ def home(request):
         'posts':posts,
         'cats':cats
     }
-    return render(request,'home.html',data)
+    return render(request,'index.html',data)
 
 
 def post(request, url):
