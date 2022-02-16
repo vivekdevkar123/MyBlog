@@ -1,0 +1,31 @@
+<footer class="page-footer bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">MyBlog</h5>
+                <p class="grey-text text-lighten-4">Welcome to my blog. In this blog I shared Information regrading
+                    programming and future technology. My name is Vivek Devkar and I am very excited to share my
+                    experince with you via blogging..😇😇 </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">CATEGORY</h5>
+                {% for cat in cats %}
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="/category/{{cat.url}}">{{cat.title}}</a></li>
+                </ul>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; 2022 Copyright | All rights reserved.
+            <a class="grey-text text-lighten-4 right" href="mailto:mrvivekdevkar123@gmail.com" target="_blank"
+                style="margin-right: 22px;">Email</a>
+            <a class="grey-text text-lighten-4 right" href="https://www.linkedin.com/in/vivekdevkar123/" target="_blank"
+                style="margin-right: 22px;">Linkdin</a>
+        </div>
+
+
+    </div>
+</footer>
