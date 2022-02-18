@@ -28,7 +28,7 @@
 
         background-color: #9facad94;
         width: 900px;
-        height: 500px;
+        height: 600px;
         margin: 186px auto 50px auto;
         padding: 30px;
         border-radius: 8px;
@@ -84,19 +84,21 @@
 
 <div class="form">
 
-    <h1>Log In</h1>
+    <h1>Sign up</h1>
 
     <div class="social-container">
-        <a href="#" class="social"><img src="{% static '/img/google signin.png' %}" style="width: 162px;"></a>
+        <a href="#" class="social"><img src="{% static '/img/signup.png' %}" style="width: 162px;"></a>
     </div>
 
     <input type="email" name="email" placeholder="Email" />
 
     <input type="password" name="Password" placeholder="Password" />
 
-    <button>Sign in</button>
+    <input type="password" name="Password" placeholder="conform password" />
+
+    <button>Create account</button>
 
 
-    <a href="/signup" style="color: white;">Create account</a>
+    <a href="/login" style="color: white;">already have an account account</a>
 
 </div>
