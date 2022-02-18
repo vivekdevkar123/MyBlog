@@ -32,3 +32,6 @@ def blogs(request):
     all_post = Post.objects.all()
     return render(request,'blogs.html',{'all_post':all_post})
     
+
+def login(request):
+    return render(request,'login.html')

@@ -1,3 +1,10 @@
+<style>
+    nav ul a:hover {
+        color: white;
+    }
+</style>
+
+
 <ul id="dropdown1" class="dropdown-content">
 
     {% for cat in cats %}
@@ -11,10 +18,12 @@
         <div class="nav-wrapper">
             <a href="/" class="brand-logo">MyBlog</a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="/blogs">Blogs</a></li>
-                <!-- Dropdown Trigger -->
+                <li class="title"><a href="/blogs">Blogs</a></li>
+
                 <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">CATEGORY<i
                             class="material-icons right">arrow_drop_down</i></a></li>
+
+                <li><a href="/login">Login</a></li>
             </ul>
         </div>
     </div>
