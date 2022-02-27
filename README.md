@@ -18,14 +18,20 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
-<!-- # screenshots
+# screenshots
 
 ### screenshot 1
 ![screenshot](/ScreenShot/Screenshot_1.png)
 
 ### screenshot 2
 ![screenshot](/ScreenShot/Screenshot_2.png)
- -->
+
+### screenshot 2
+![screenshot](/ScreenShot/Screenshot_3.png)
+
+### screenshot 2
+![screenshot](/ScreenShot/Screenshot_4.png)
+
 
 
 ## Contact
