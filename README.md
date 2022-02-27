@@ -11,21 +11,21 @@ The website is made from Django, HTML, CSS and bootstrap templates.
 
 ## Usage
 
-Just install django library on your device and install latest version of python.
+Just install django library on your device and install latest version of python. and run requirement.txt in terminal.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-# screenshots
+<!-- # screenshots
 
 ### screenshot 1
 ![screenshot](/ScreenShot/Screenshot_1.png)
 
 ### screenshot 2
 ![screenshot](/ScreenShot/Screenshot_2.png)
-
+ -->
 
 
 ## Contact
