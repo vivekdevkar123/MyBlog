@@ -85,19 +85,22 @@
 <div class="form">
 
     <h1>Sign up</h1>
+    <form action="login" method="post">
 
-    <div class="social-container">
-        <a href="#" class="social"><img src="{% static '/img/signup.png' %}" style="width: 162px;"></a>
-    </div>
+        {% csrf_token %}
 
-    <input type="email" name="email" placeholder="Email" />
+        <div class="social-container">
+            <a href="#" class="social"><img src="{% static '/img/signup.png' %}" style="width: 162px;"></a>
+        </div>
 
-    <input type="password" name="Password" placeholder="Password" />
+        <input type="email" name="email" placeholder="Email" />
 
-    <input type="password" name="Password" placeholder="conform password" />
+        <input type="password" name="Password1" placeholder="Password" />
 
-    <button>Create account</button>
+        <input type="password" name="Password2" placeholder="conform password" />
 
+        <button>Create account</button>
+    </form>
 
     <a href="/login" style="color: white;">already have an account account</a>
 
