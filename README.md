@@ -16,13 +16,16 @@ The website is made from Django, HTML, CSS and bootstrap templates.
 
 ## Appendix
 
+Website is made from HTML CSS Javascript bootstrap
+
+Website uses Django as backend with MVT architecture.
+
+SqlLite is used as relational Database.
+
 This website is with CRUD (create read update delete) operation.
 
-This website is Responsive in any device (laptop or mobile)
+This website is flexible for all device (responsive website).
 
-The blog post are classified by categories like programming, finance or new technology.
-
-This website provides User registration facility with google api for login and signup
 
 
 ## Authors
