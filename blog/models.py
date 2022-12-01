@@ -4,6 +4,7 @@ from nturl2path import url2pathname
 from django.db import models
 from django.utils.html import format_html
 from tinymce.models import HTMLField
+from datetime import datetime
 
 # Create your models here.
 
@@ -31,6 +32,7 @@ class Post(models.Model):
     url = models.CharField(max_length=100)
     cat = models.ForeignKey(Category,on_delete=models.CASCADE)
     image = models.ImageField(upload_to = 'post/')
+    Date_of_blog = models.DateField(auto_now=False, auto_now_add=False,default=datetime.now)
 
     def __str__(self):
         return self.title

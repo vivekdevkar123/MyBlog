@@ -13,24 +13,21 @@
                 style="max-height: 450px;width:100%; object-fit:cover">
         </div>
     </div>
-    <div class="collection">
+
+
+    <div class="list-group" style="margin: 30px 0 30px 5px;">
 
         {% for p in all_post %}
 
-        <div class="col s12 m7">
-            <div class="card horizontal">
-                <div class="card-stacked">
-                    <div class="card-content">
-                        <h5>{{p.title}}</h5>
-                    </div>
-                    <div class="card-action">
-                        <a href="/blog/{{p.url}}">Read more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a> -->
+
+        <a href="/blog/{{p.url}}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{p.title}}</h5>
+                <small class="text-muted">{{p.Date_of_blog}}</small>
+            </div>
+        </a>
+
 
         {% empty %}
 
@@ -40,5 +37,8 @@
     </div>
 
 </div>
+
+
+
 
 {% endblock %}

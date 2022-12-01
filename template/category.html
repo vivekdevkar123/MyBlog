@@ -6,25 +6,38 @@
 
 <div class="container-custom">
 
-    <h3>{{cat.title}}</h3>
+    <center>
+
+        <h2>{{cat.title}}</h2>
+    </center>
 
     <div class="img-container">
         <img src="/media/{{cat.image}}" class="responsive-img" style="max-height: 450px;width:100%; object-fit:cover">
     </div>
 
 
-    <div class="collection">
 
-    {% for p in posts %}
-    
-        <a href="/blog/{{p.url}}" class="collection-item">{{p.title}}</a>
+    <div class="list-group" style="margin: 30px 0 30px 5px;">
+
+        {% for p in posts %}
+
+
+
+        <a href="/blog/{{p.url}}" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">{{p.title}}</h5>
+                <small class="text-muted">{{p.Date_of_blog}}</small>
+            </div>
+        </a>
+
 
         {% empty %}
 
         <h3>No post in this category</h3>
 
-    {% endfor %}
+        {% endfor %}
     </div>
+
 
 </div>
 

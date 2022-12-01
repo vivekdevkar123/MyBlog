@@ -1,4 +1,8 @@
 <style>
+    nav ul a:hover {
+        color: white;
+    }
+
     .read-about {
         width: 100%;
         height: 30px;
@@ -23,28 +27,21 @@
 
 {% block content %}
 
+
 <div class="container-custom">
 
-    <div class="owl-carousel">
+    <div class="owl-carousel owl-theme">
         {% for cat in cats %}
-
-        <div class="card" style="margin-left: 10px;">
-
-            <div class="img-container">
-
-                <img src="/media/{{cat.image}}" class="responsive-img center-align" style="height: 300;width: 100%;">
-
-            </div>
-            <div class="card-content">
-                <div class="card-title">
-                    {{cat.title}}
-                </div>
-                <p class="truncate">{{cat.description}}</p>
-                <div class="container mt20 center-align">
-                    <a href="/category/{{cat.url}}" class="btn bg-primary">VIEW</a>
+        <div class="item">
+            <div class="card" style="margin: 20px;;">
+                <img src="/media/{{cat.image}}" class="card-img-top responsive-img center-align" alt="..."
+                    style="height: 300;width: 100%;">
+                <div class="card-body">
+                    <h3 class="card-title">{{cat.title}}</h3>
+                    <p class="card-text"> {{cat.description | truncatewords:40 | safe}} </p>
+                    <a href="/category/{{cat.url}}" class="btn btn-outline-info">Read More..</a>
                 </div>
             </div>
-
         </div>
 
         {% endfor %}
@@ -52,51 +49,41 @@
 
 </div>
 
+<hr>
+
 
 <div class="read-about">
-    <p>People also read about this</p>
+    <p>Most Recent Blogs !!!</p>
 </div>
 
-
-<div class="container">
-
-    <div class="row">
-
-        <div class="col s12 ">
-
-
-            {%for p in posts %}
-            {% if forloop.counter < 4 %} <div class="row">
-
-                <div class="col s12 m8">
+<br>
 
 
 
-                    <div class="col s12 m4">
 
-                        <img src="/media/{{p.image}}" class="responsive-img right" style="margin-top:50px;">
-
-                    </div>
-                    {{p.content |truncatewords:40 | safe}}
-                    <div class="mt20">
-                        <a href="/blog/{{p.url}}" class="btn  bg-primary right ">Read More..</a>
-                    </div>
-                </div>
-
+{% for p in posts %}
+{% if forloop.counter < 4 %} <div class="card mb-3"
+    style="max-width: 90%; border: 2px solid rgb(62, 210, 230); border-radius: 10px; margin: 20px 0 0 50px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img src="/media/{{p.image}}" class="img-fluid rounded-start" alt="..."
+                style="width: 30vw; max-height: 40vh;">
         </div>
-        <div class="read-separate">
-
+        <div class="col-md-8">
+            <div class="card-body">
+                <h1 class="card-title" style="font-weight: bolder; padding: 10px 0 20px 5px; ">{{p.title}}</h1>
+                <p class="card-text">{{p.content |truncatewords:60 | safe}} <a href="/blog/{{p.url}}"
+                        style="text-decoration: none; color:black; font-size: 1.5rem; font-weight: bolder;">Read
+                        More</a></p>
+            </div>
         </div>
-        {% endif %}
-
-        {%endfor %}
-
-
+    </div>
     </div>
 
+    {% endif %}
 
-</div>
+    {%endfor %}
 
-</div>
 
-{% endblock %}
+
+    {% endblock %}

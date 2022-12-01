@@ -8,7 +8,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('vivek-admin-pannel/', admin.site.urls),
     path('', include('blog.urls')),
     path('tinymce/', include('tinymce.urls')),
     

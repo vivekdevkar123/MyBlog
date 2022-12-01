@@ -1,4 +1,4 @@
-<footer class="page-footer bg-primary">
+<!-- <footer class="page-footer bg-primary">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -27,5 +27,47 @@
         </div>
 
 
+    </div>
+</footer> -->
+
+
+
+<!-- Site footer -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <h1>MyBlog</h1>
+                <p class="text-justify">Welcome to my blog. In this blog I shared Information regrading
+                    programming <br> and future technology. My name is Vivek Devkar and I am very excited to share <br> my
+                    experince with you via blogging..😇😇</p>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Categories</h6>
+                <ul class="footer-links">
+                    {% for cat in cats %}
+                    <li><a href="/category/{{cat.url}}" style="text-decoration: none;">{{cat.title}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-xs-6 col-md-3">
+                <h6>Social Media</h6>
+                <ul class="footer-links">
+                    <li><a href="https://www.linkedin.com/in/vivekdevkar123/" style="text-decoration: none;" target="_blank">Linkdin</a></li>
+                    <li><a href="https://github.com/vivekdevkar123" style="text-decoration: none;" target="_blank">GitHub</a></li>
+                    <li><a href="mailto:mrvivekdevkar123@gmail.com" style="text-decoration: none;" target="_blank">Email</a></li>
+                    <li><a href="https://www.instagram.com/vivekdevkar123/" style="text-decoration: none;" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    <div class="footer-copyright">
+        <div class="container">
+            &copy; 2022 Copyright | All rights reserved.
+        </div>
     </div>
 </footer>

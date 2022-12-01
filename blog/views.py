@@ -16,32 +16,30 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def home(request):
-    posts = Post.objects.all()[:11]
+    posts = Post.objects.all()[::-1]
     cats = Category.objects.all()
     data = {
         'posts':posts,
         'cats':cats
     }
-    return render(request,'main.html',data)
+    return render(request,'index.html',data)
 
-
-@login_required(login_url='login')
 def post(request, url):
     post = Post.objects.get(url = url)
     cats = Category.objects.all()
 
     return render(request, 'posts.html',{'post': post, 'cats': cats})
 
-@login_required(login_url='login')
 def category(request,url):
     cat = Category.objects.get(url = url)
+    cats = Category.objects.all()
     posts = Post.objects.filter(cat=cat)
-    return render(request,'category.html',{'cat':cat, 'posts':posts})
+    return render(request,'category.html',{'cat':cat, 'posts':posts,'cats':cats})
 
-@login_required(login_url='login')
 def blogs(request):
     all_post = Post.objects.all()
-    return render(request,'blogs.html',{'all_post':all_post})
+    cats = Category.objects.all()
+    return render(request,'blogs.html',{'all_post':all_post,'cats':cats})
 
 def signup(request):
     form = CreateUserForm()
@@ -78,8 +76,6 @@ def logoutUser(request):
     logout(request)
     return redirect('login')
 
-
-@login_required(login_url='login')
 def main(request):
     posts = Post.objects.all()[:11]
     cats = Category.objects.all()

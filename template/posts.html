@@ -53,26 +53,18 @@
 
 <div class="container-custom">
 
-    <div class="owl-carousel">
+    <div class="owl-carousel owl-theme">
         {% for cat in cats %}
-
-        <div class="card" style="margin-left: 10px;">
-
-            <div class="img-container">
-
-                <img src="/media/{{cat.image}}" class="responsive-img center-align" style="height: 300;width: 100%;">
-
-            </div>
-            <div class="card-content">
-                <div class="card-title">
-                    {{cat.title}}
-                </div>
-                <p class="truncate">{{cat.description}}</p>
-                <div class="container mt20 center-align">
-                    <a href="/category/{{cat.url}}" class="btn bg-primary">VIEW</a>
+        <div class="item">
+            <div class="card" style="margin: 20px;;">
+                <img src="/media/{{cat.image}}" class="card-img-top responsive-img center-align" alt="..."
+                    style="height: 300;width: 100%;">
+                <div class="card-body">
+                    <h3 class="card-title">{{cat.title}}</h3>
+                    <p class="card-text"> {{cat.description | truncatewords:40 | safe}} </p>
+                    <a href="/category/{{cat.url}}" class="btn btn-outline-info">Read More..</a>
                 </div>
             </div>
-
         </div>
 
         {% endfor %}
