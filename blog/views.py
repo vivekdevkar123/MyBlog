@@ -76,11 +76,18 @@ def logoutUser(request):
     logout(request)
     return redirect('login')
 
-def main(request):
-    posts = Post.objects.all()[:11]
-    cats = Category.objects.all()
+
+def search(request):
+    query = request.GET['query']
+    if len(query) > 78 or len(query) == 0:
+        allpost = []
+    else:
+        allpostTitle = Post.objects.filter(title__icontains = query)
+        allpostContent = Post.objects.filter(content__icontains = query)
+        allpost = allpostTitle.union(allpostContent)
+
     data = {
-        'posts':posts,
-        'cats':cats
+        'posts':allpost,
+        'query':query,
     }
-    return render(request,'index.html',data)
+    return render(request,'search.html',data)

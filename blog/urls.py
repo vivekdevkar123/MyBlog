@@ -1,5 +1,5 @@
 from django.urls import path,include
-from .views import home,post,category,blogs,signup,loginPage,logoutUser,main
+from .views import home,post,category,blogs,signup,loginPage,logoutUser,search
 
 
 
@@ -11,5 +11,5 @@ urlpatterns = [
     path('signup',signup),
     path('login',loginPage, name='login'),
     path('logout/',logoutUser,name='logout'),
-    path('main',main,name='main'),
+    path('search/',search,name='search'),
 ]
