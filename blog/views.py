@@ -78,6 +78,7 @@ def logoutUser(request):
 
 
 def search(request):
+    cats = Category.objects.all()
     query = request.GET['query']
     if len(query) > 78 or len(query) == 0:
         allpost = []
@@ -89,5 +90,6 @@ def search(request):
     data = {
         'posts':allpost,
         'query':query,
+        'cats':cats,
     }
     return render(request,'search.html',data)
