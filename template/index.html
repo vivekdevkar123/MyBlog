@@ -62,23 +62,27 @@
 
 
 {% for p in posts %}
-{% if forloop.counter < 4 %} <div class="card mb-3"
-    style="max-width: 90%; border: 2px solid rgb(62, 210, 230); border-radius: 10px; margin: 20px 0 0 50px;">
-    <div class="row g-0">
-        <div class="col-md-4">
-            <img src="/media/{{p.image}}" class="img-fluid rounded-start" alt="..."
-                style="width: 30vw; max-height: 40vh;">
-        </div>
-        <div class="col-md-8">
+{% if forloop.counter < 4 %} 
+
+
+    <a href="/blog/{{p.url}}" style="text-decoration: none; color:black ">
+
+
+        <div class="card mb-3" style="padding: 10px; margin:10px">
+            <center>
+                <img src="/media/{{p.image}}" class="card-img-top" alt="..." style="width:80%; max-height: 50vh;" >
+            </center>
             <div class="card-body">
-                <h1 class="card-title" style="font-weight: bolder; padding: 10px 0 20px 5px; ">{{p.title}}</h1>
-                <p class="card-text">{{p.content |truncatewords:60 | safe}} <a href="/blog/{{p.url}}"
-                        style="text-decoration: none; color:black; font-size: 1.5rem; font-weight: bolder;">Read
-                        More</a></p>
+              <h1 class="card-title">{{p.title}}</h1>
+              <p class="card-text">{{p.content |truncatewords:60 | safe}}</p>
+              <p class="card-text"><small class="text-muted">Blog Published on {{p.Date_of_blog}}</small></p>
             </div>
+          </div>
+        <div class="card">
+    
         </div>
-    </div>
-    </div>
+    
+    </a>
 
     {% endif %}
 
