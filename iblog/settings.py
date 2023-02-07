@@ -77,10 +77,11 @@ WSGI_APPLICATION = 'iblog.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'MyBlog',
-        'USER':'postgres',
-        'PASSWORD':'vivek',
-        'HOST':'localhost'
+        'NAME': 'dcnb2mrvi9ndd0',
+        'USER':'nefclicexfntst',
+        'PASSWORD':'685a1dcb043a943e1e2ee0a72f9e321f28d99af37cbe45c0d7c92a8a8547ae56',
+        'PORT':'5432',
+        'HOST':'ec2-52-203-118-49.compute-1.amazonaws.com'
     }
 }
 
