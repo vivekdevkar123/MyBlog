@@ -1,8 +1,5 @@
 from django.urls import path,include
-from .views import home,post,category,blogs,signup,loginPage,logoutUser,search,custom_404
-from django.conf.urls import handler404
-
-handler404 = custom_404
+from .views import home,post,category,blogs,signup,loginPage,logoutUser,search
 
 urlpatterns = [
     path('',home,name='home'),
