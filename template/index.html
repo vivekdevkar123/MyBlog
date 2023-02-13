@@ -19,6 +19,11 @@
         text-align: center;
     }
 
+    .card{
+        margin: 20px;
+        padding: 20px;
+    }
+
 
     @media only screen and (max-width: 767px) {
         .card-img {
@@ -32,6 +37,12 @@
         .card-title {
             float: none;
             text-align: center;
+        }
+        .card{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
         }
     }
 </style>
@@ -54,7 +65,7 @@
                     style="height: 300;width: 100%;">
                 <div class="card-body">
                     <h3 class="card-title">{{cat.title}}</h3>
-                    <p class="card-text"> {{cat.description | truncatewords:30 | safe}} </p>
+                    <p class="card-text"> {{cat.description | truncatewords:20 | safe}} </p>
                     <a href="/category/{{cat.url}}" class="btn btn-outline-info">Read More..</a>
                 </div>
             </div>
@@ -81,27 +92,9 @@
 {% if forloop.counter < 4 %}
 
 
-    <!-- <a href="/blog/{{p.url}}" style="text-decoration: none; color:black ">
-        <div class="card mb-3" style="padding: 10px; margin:10px">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="/media/{{p.image}}" class="card-img" alt="..."
-                        style="width:100%; height:50vh; float:left;">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h1 class="card-title" style="text-align: center;">{{p.title}}</h1>
-                        <br>
-                        <p class="card-text">{{p.content |truncatewords:150 | safe}}</p>
-                        <p class="card-text"><small class="text-muted">Blog Published on {{p.Date_of_blog}}</small></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </a> -->
     <a href="/blog/{{p.url}}" style="text-decoration: none; color:black ">
     <div class="card mb-3"
-    style="max-width: 90%; border: 2px solid rgb(62, 210, 230); border-radius: 10px; margin: 20px 0 0 50px; height: fit-content;">
+    style="border: 2px solid rgb(62, 210, 230); border-radius: 10px; height: fit-content;">
     <div class="row g-0">
         <div class="col-md-4">
             <img src="/media/{{p.image}}" class="img-fluid rounded-start card-img" alt="..."
@@ -110,7 +103,7 @@
         <div class="col-md-8">
             <div class="card-body">
                 <h1 class="card-title" style="text-align: center; margin: 20px;">{{p.title}}</h1>
-                <p class="card-text">{{p.content |truncatewords:40 | safe}}</p>
+                <p class="card-text">{{p.content |truncatewords:80 | safe}}</p>
             </div>
             <div>
     

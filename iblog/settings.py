@@ -67,23 +67,23 @@ WSGI_APPLICATION = 'iblog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': str(BASE_DIR / 'db.sqlite3'),
-#     }
-# }
-
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dcnb2mrvi9ndd0',
-        'USER':'nefclicexfntst',
-        'PASSWORD':'685a1dcb043a943e1e2ee0a72f9e321f28d99af37cbe45c0d7c92a8a8547ae56',
-        'PORT':'5432',
-        'HOST':'ec2-52-203-118-49.compute-1.amazonaws.com'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'dcnb2mrvi9ndd0',
+#         'USER':'nefclicexfntst',
+#         'PASSWORD':'685a1dcb043a943e1e2ee0a72f9e321f28d99af37cbe45c0d7c92a8a8547ae56',
+#         'PORT':'5432',
+#         'HOST':'ec2-52-203-118-49.compute-1.amazonaws.com'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
