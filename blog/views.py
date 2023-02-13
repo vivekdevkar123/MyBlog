@@ -93,3 +93,7 @@ def search(request):
         'cats':cats,
     }
     return render(request,'search.html',data)
+
+
+def custom_404(request, exception=None):
+    return render(request, "404.html", {"message": "Page not found."})
